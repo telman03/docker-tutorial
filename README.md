@@ -4,3 +4,4 @@ This is a beginner's tutorial for Docker, a platform for developing, shipping, a
 ## Table of Contents
 - [How to view tables inside docker containers?](https://github.com/telman03/docker-tutorial/blob/main/tutorial/dbtables.md)<br>
 - [How to dockerize spring boot application?](https://github.com/telman03/docker-tutorial/blob/main/tutorial/dockerizespringboot.md)
+- [How to run PostgreSQL Database Inside Docker Container with Docker Compose?](https://github.com/telman03/docker-tutorial/blob/main/tutorial/docker-postgre.md)
