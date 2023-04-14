@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  postgres:
+    image: postgres:9.6
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: 'your_user'
+      POSTGRES_PASSWORD: 'your_password'
+    ports:
+      - '5432:5432'
+    volumes:
+      - ../../../ro:/ro:ro
+      - ../../../rw:/rw
+      - ../../../Downloads:/dl:ro
+      - ../.data/pg96:/var/lib/postgresql/data/
+    container_name: pg_0
