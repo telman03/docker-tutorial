@@ -1,0 +1,35 @@
+version: "3"
+services:
+  springBootApp:
+    image: 'IMAGE-spring-boot'
+    build:
+      context: .
+    container_name: docker-postgres-springboot-app
+    environment:
+      - POSTGRES_HOST=docker-postgres-springboot-db
+    ports:
+      - "8080:8080"
+    networks:
+      - network
+    depends_on:
+      - postgresDb
+
+  postgresDb:
+    image: postgres
+    container_name: docker-postgres-springboot-db
+    ports:
+      - "5434:5432"
+    networks:
+      - network
+    volumes:
+      - volume:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=YOUR_PASSWORD
+      - POSTGRES_DB=spring_boot_postgres_db
+
+networks:
+  network:
+
+volumes:
+  volume:
