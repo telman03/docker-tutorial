@@ -49,5 +49,4 @@ docker ps
 ```
 You should see the postgres container listed along with its status and port mappings.
 
-### Conclusion
-In this tutorial, we learned how to use Docker Compose to run a PostgreSQL database inside a Docker container. This makes it easy to set up a local development environment for your project without having to install and configure the database software on your machine.
+
